@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Coast Stump Grinding | Cleveland, OH</title>
+<meta name="description" content="Professional stump grinding in Cleveland and Northeast Ohio. Fast, affordable, reliable. Serving homeowners and tree service contractors. Call (440) 862-8231.">
+<meta name="keywords" content="stump grinding Cleveland, stump removal Cleveland, stump grinding Northeast Ohio, stump grinding contractor Ohio">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #212121;
+    --blue: #3B6FD4;
+    --lightblue: #5B9BD5;
+    --white: #ffffff;
+    --offwhite: #f0f0f0;
+    --gray: #aaaaaa;
+    --darkgray: #2e2e2e;
+    --border: rgba(91,155,213,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(33,33,33,0.96);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-wave {
+    height: 18px;
+    width: auto;
+  }
+
+  .nav-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  .nav-cta {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--blue);
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--lightblue); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 24px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-wave {
+    width: min(480px, 80vw);
+    margin-bottom: 32px;
+    opacity: 0.95;
+  }
+
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(42px, 8vw, 80px);
+    line-height: 1.0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .hero h1 span {
+    color: var(--lightblue);
+  }
+
+  .hero-sub {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: clamp(16px, 3vw, 22px);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 40px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--blue);
+    padding: 14px 36px;
+    text-decoration: none;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--lightblue); }
+
+  .btn-secondary {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 14px 36px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--lightblue);
+    color: var(--lightblue);
+  }
+
+  /* SECTION BASE */
+  section {
+    padding: 88px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--lightblue);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(30px, 5vw, 48px);
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .service-card {
+    background: var(--darkgray);
+    padding: 40px 32px;
+    border-top: 3px solid var(--blue);
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+  }
+
+  .service-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* WHY US */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 56px;
+  }
+
+  .why-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .why-number {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    color: var(--blue);
+    line-height: 1;
+    opacity: 0.35;
+  }
+
+  .why-item h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .why-item p {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  /* B2B SECTION */
+  .b2b-section {
+    background: var(--darkgray);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .b2b-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 88px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .b2b-inner h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(28px, 4vw, 44px);
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+
+  .b2b-inner h2 span { color: var(--lightblue); }
+
+  .b2b-inner p {
+    font-size: 15px;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .b2b-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .b2b-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  .b2b-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .b2b-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .b2b-stat {
+    background: var(--navy);
+    padding: 28px 32px;
+    border-left: 3px solid var(--blue);
+  }
+
+  .b2b-stat-num {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .b2b-stat-label {
+    font-size: 13px;
+    color: var(--gray);
+    letter-spacing: 0.04em;
+  }
+
+  /* SERVICE AREA */
+  .area-section {
+    text-align: center;
+  }
+
+  .area-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .area-tag {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--lightblue);
+    border: 1px solid var(--border);
+    padding: 8px 18px;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--blue);
+  }
+
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 88px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .contact-inner h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: clamp(30px, 5vw, 52px);
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+
+  .contact-inner p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-item-label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 4px;
+  }
+
+  .contact-item-value {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+    display: block;
+  }
+
+  .contact-item-value:hover { opacity: 0.8; }
+
+  .contact-item-value.small {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #171717;
+    padding: 32px 24px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  footer p {
+    font-size: 12px;
+    color: #555;
+    letter-spacing: 0.06em;
+  }
+
+  footer p span { color: var(--lightblue); }
+
+  /* WAVE SVG inline */
+  .wave-svg {
+    display: block;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .b2b-inner,
+    .contact-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    nav { padding: 0 16px; }
+    .nav-name { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg class="nav-wave" viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 16 C10 4, 20 4, 30 16 C40 28, 50 28, 60 16 C70 4, 80 4, 90 16 C100 28, 110 28, 120 16" stroke="#3B6FD4" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </svg>
+    <span class="nav-name">North Coast Stump Grinding</span>
+  </div>
+  <a href="tel:4408628231" class="nav-cta">(440) 862-8231</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-wave" viewBox="0 0 480 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 32 C20 8, 40 8, 60 32 C80 56, 100 56, 120 32 C140 8, 160 8, 180 32 C200 56, 220 56, 240 32 C260 8, 280 8, 300 32 C320 56, 340 56, 360 32 C380 8, 400 8, 420 32 C440 56, 460 56, 480 32" stroke="#3B6FD4" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </svg>
+  <h1>North Coast<br><span>Stump Grinding</span></h1>
+  <p class="hero-sub">Greater Cleveland &amp; Northeast Ohio</p>
+  <div class="hero-btns">
+    <a href="tel:4408628231" class="btn-primary">Call Now — (440) 862-8231</a>
+    <a href="mailto:northcoaststumps@gmail.com" class="btn-secondary">Get a Quote</a>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SERVICES -->
+<section>
+  <div class="section-label">What we do</div>
+  <h2 class="section-title">One Thing.<br>Done Right.</h2>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none">
+        <rect x="8" y="16" width="28" height="22" rx="2" fill="#3B6FD4" opacity="0.15"/>
+        <rect x="8" y="16" width="28" height="22" rx="2" stroke="#5B9BD5" stroke-width="1.5"/>
+        <ellipse cx="22" cy="16" rx="14" ry="5" fill="#3B6FD4" opacity="0.3"/>
+        <ellipse cx="22" cy="16" rx="14" ry="5" stroke="#5B9BD5" stroke-width="1.5"/>
+        <ellipse cx="22" cy="16" rx="8" ry="3" stroke="#5B9BD5" stroke-width="1" opacity="0.6"/>
+        <path d="M8 34 Q2 38 4 42" stroke="#5B9BD5" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M36 34 Q42 38 40 42" stroke="#5B9BD5" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <h3>Stump Grinding</h3>
+      <p>Complete stump removal ground below surface level. Clean, fast, and fully cleared so your yard is ready for what's next — whether that's sod, a garden, or a new tree.</p>
+    </div>
+
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="16" stroke="#5B9BD5" stroke-width="1.5"/>
+        <circle cx="22" cy="22" r="10" fill="#3B6FD4" opacity="0.15" stroke="#5B9BD5" stroke-width="1.5"/>
+        <circle cx="22" cy="22" r="4" fill="#5B9BD5"/>
+        <line x1="22" y1="8" x2="22" y2="36" stroke="#5B9BD5" stroke-width="1.5"/>
+        <line x1="8" y1="22" x2="36" y2="22" stroke="#5B9BD5" stroke-width="1.5"/>
+      </svg>
+      <h3>Contractor Sub Work</h3>
+      <p>Tree service companies — we are your dedicated grinding sub. Reliable scheduling, competitive rates, and we never solicit your customers. Let us handle the stumps so you can move to the next job.</p>
+    </div>
+
+    <div class="service-card">
+      <svg class="service-icon" viewBox="0 0 44 44" fill="none">
+        <path d="M22 4 L38 12 L38 28 Q38 38 22 42 Q6 38 6 28 L6 12 Z" stroke="#5B9BD5" stroke-width="1.5" fill="#3B6FD4" opacity="0.1"/>
+        <path d="M15 22 L20 27 L30 17" stroke="#5B9BD5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>Chip Cleanup</h3>
+      <p>Stump grindings are left neatly in the hole for natural backfill, or raked out across the surrounding area. Your job site stays clean and professional.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- WHY US -->
+<section>
+  <div class="section-label">Why North Coast</div>
+  <h2 class="section-title">Specialist,<br>Not a Generalist.</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-number">01</div>
+      <h4>All We Do Is Stumps</h4>
+      <p>We're not a tree company that grinds stumps on the side. This is our only service, which means faster scheduling and sharper focus on every job.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-number">02</div>
+      <h4>Reliable Sub Partner</h4>
+      <p>Tree companies rely on us to show up, do the work, and leave. No drama, no upselling your customers, no headaches.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-number">03</div>
+      <h4>Greater Cleveland</h4>
+      <p>We serve the full northeast Ohio region — Cleveland, Lakewood, Parma, Westlake, Strongsville, and surrounding areas.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-number">04</div>
+      <h4>Fast Turnaround</h4>
+      <p>We keep our schedule tight and batch jobs by area so we can get to you quickly without long waits.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- B2B SECTION -->
+<div class="b2b-section">
+  <div class="b2b-inner">
+    <div>
+      <div class="section-label">Tree Service Companies</div>
+      <h2>Your Dedicated <span>Grinding Sub</span></h2>
+      <p>Don't own a grinder? Don't want to deal with the overhead? We work with tree service companies throughout Northeast Ohio as a reliable, professional subcontractor.</p>
+      <ul class="b2b-list">
+        <li>Competitive subcontractor pricing — ask about our contractor rates</li>
+        <li>We never contact or solicit your customers directly</li>
+        <li>Fully insured — certificate available on request</li>
+        <li>Flexible scheduling to fit your job flow</li>
+        <li>We handle stumps of all sizes</li>
+      </ul>
+    </div>
+    <div class="b2b-visual">
+      <div class="b2b-stat">
+        <div class="b2b-stat-num">100%</div>
+        <div class="b2b-stat-label">Stump grinding — that's all we do</div>
+      </div>
+      <div class="b2b-stat">
+        <div class="b2b-stat-num">NE Ohio</div>
+        <div class="b2b-stat-label">Full Northeast Ohio service area</div>
+      </div>
+      <div class="b2b-stat">
+        <div class="b2b-stat-num">(440)</div>
+        <div class="b2b-stat-label">862-8231 — call or text anytime</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE AREA -->
+<section class="area-section">
+  <div class="section-label">Where we work</div>
+  <h2 class="section-title">Service Area</h2>
+  <div class="area-tags">
+    <span class="area-tag">Cleveland</span>
+    <span class="area-tag">Lakewood</span>
+    <span class="area-tag">Parma</span>
+    <span class="area-tag">Strongsville</span>
+    <span class="area-tag">Westlake</span>
+    <span class="area-tag">Avon</span>
+    <span class="area-tag">North Olmsted</span>
+    <span class="area-tag">Rocky River</span>
+    <span class="area-tag">Berea</span>
+    <span class="area-tag">Solon</span>
+    <span class="area-tag">Mentor</span>
+    <span class="area-tag">Euclid</span>
+    <span class="area-tag">Medina</span>
+    <span class="area-tag">Brunswick</span>
+    <span class="area-tag">Lorain</span>
+    <span class="area-tag">Elyria</span>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONTACT -->
+<div class="contact-section">
+  <div class="contact-inner">
+    <div>
+      <h2>Get In Touch</h2>
+      <p>Homeowner or contractor — call or text anytime for a fast quote. We respond quickly and can usually get to your job within the week.</p>
+    </div>
+    <div class="contact-details">
+      <div>
+        <div class="contact-item-label">Phone / Text</div>
+        <a href="tel:4408628231" class="contact-item-value">(440) 862-8231</a>
+      </div>
+      <div>
+        <div class="contact-item-label">Email</div>
+        <a href="mailto:northcoaststumps@gmail.com" class="contact-item-value small">northcoaststumps@gmail.com</a>
+      </div>
+      <div>
+        <div class="contact-item-label">Website</div>
+        <span class="contact-item-value small">northcoaststumpgrinding.com</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>North Coast Stump Grinding</span> · Cleveland, OH · All rights reserved</p>
+</footer>
+
+</body>
+</html>
